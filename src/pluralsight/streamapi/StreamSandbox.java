@@ -79,5 +79,8 @@ public class StreamSandbox {
 
         // Notes:
         // flatmap just flattens an array of arrays (2 dimensional) into a single list (1 dimensional)
+        // TODO: array of ints and stream with min, max, sum etc...
+        // TODO: stream file.readLines() to findFirst name starting with some characters
+        // TODO: stream a string into individual characters and do a toUpper.
     }
 }
