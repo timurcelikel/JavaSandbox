@@ -1,4 +1,4 @@
-package java17.generics;
+package java17.generics.animal;
 
 public interface Animal {
 
