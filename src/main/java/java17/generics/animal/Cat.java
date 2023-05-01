@@ -1,10 +1,10 @@
-package java17.generics;
+package java17.generics.animal;
 
-public class Dog implements Animal {
+public class Cat implements Animal {
 
 	private String noiseToMake;
 
-	public Dog(String noiseToMake) {
+	public Cat(String noiseToMake) {
 
 		this.noiseToMake = noiseToMake;
 	}
@@ -28,7 +28,7 @@ public class Dog implements Animal {
 	@Override
 	public String toString() {
 
-		return "Dog{" +
+		return "Cat{" +
 				"noiseToMake='" + noiseToMake + '\'' +
 				'}';
 	}

@@ -1,4 +1,4 @@
-package java17.generics;
+package java17.generics.animal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +36,7 @@ public class AnimalPrinterClient {
 
 		//list.forEach(p -> System.out.println(p));
 		list.forEach(System.out::println);
+
 	}
 
 	private static void printAnimalList(List<? extends Animal> list) {
