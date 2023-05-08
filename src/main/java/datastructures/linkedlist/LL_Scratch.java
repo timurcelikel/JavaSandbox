@@ -111,22 +111,27 @@ class LinkedList {
 			return temp;
 		}
 	}
-
+	// 99 100 44
 	public Node get(int index) {
-		int curr = 0;
+		int indexCount = 0;
 		if (index == 0) {
+			System.out.println("Returning Node: " + head.value + " at index " + index);
 			return head;
+		} else if (index == length - 1) {
+			System.out.println("Returning Node: " + tail.value + " at index " + index);
+			return tail;
 		} else {
-			Node iterator = head.next;
-			while (iterator.next != null) {
-				curr++;
-
-				if (index == length) {
-					return iterator;
+			Node temp = head;
+			while (temp.next != null) {
+				if (index == indexCount) {
+					System.out.println("Returning Node: " + temp.value + " at index " + index);
+					return temp;
 				}
-
-				iterator = iterator.next;
+				indexCount++;
+				temp = temp.next;
 			}
+		System.out.println("No node found at index: " + index);
+		return null;
 		}
 	}
 }
@@ -164,5 +169,11 @@ public class LL_Scratch {
 		myList2.printList();
 		myList2.removeFirst();
 		myList2.printList();
+
+		System.out.println("Getting node at index 1...");
+		myList.append(44);
+		myList.append(55);
+		myList.printList();
+		myList.get(2);
 	}
 }
