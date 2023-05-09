@@ -120,4 +120,16 @@ public class LinkedListTest {
 		myList.printList();
 		assertEquals(10, removedNode4.getValue());
 	}
+	@Test
+	public void linkedListReverseListTest() {
+
+		LinkedList myList = new LinkedList(10);
+		myList.append(11);
+		myList.append(13);
+		myList.append(14);
+		myList.printList();
+
+		myList.reverse();
+		myList.printList();
+	}
 }
