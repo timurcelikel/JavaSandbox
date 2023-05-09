@@ -111,7 +111,8 @@ class LinkedList {
 			return temp;
 		}
 	}
-	// 99 100 44
+
+	// Note: This is my original implementation of this without looking ahead. The udemy example is better and found in LinkedList.java
 	public Node get(int index) {
 		int indexCount = 0;
 		if (index == 0) {
@@ -130,8 +131,18 @@ class LinkedList {
 				indexCount++;
 				temp = temp.next;
 			}
-		System.out.println("No node found at index: " + index);
-		return null;
+			System.out.println("No node found at index: " + index);
+			return null;
+		}
+	}
+
+	public boolean set(int index, int value) {
+		Node node = get(index);
+		if (node != null) {
+			node.value = value;
+			return true;
+		} else {
+			return false;
 		}
 	}
 }
