@@ -175,4 +175,24 @@ public class LinkedList {
 			return temp;
 		}
 	}
+
+	public void reverse() {
+		// 10 11 13 14
+		// length = 4
+		// first index = 2
+		if (length != 0) {
+			for (int i = length; i >= 2; i--) {
+				Node temp = get(i - 1);
+				Node prevNode = get(i - 2);        // 13		11		10
+				temp.setNext(prevNode);            // 14 -> 13		13 -> 11
+				if (i - 2 == 0) {
+					prevNode.setNext(null);
+					Node place;
+					place = tail;
+					tail = head;
+					head = place;
+				}
+			}
+		}
+	}
 }
