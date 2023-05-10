@@ -177,14 +177,11 @@ public class LinkedList {
 	}
 
 	public void reverse() {
-		// 10 11 13 14
-		// length = 4
-		// first index = 2
 		if (length != 0) {
 			for (int i = length; i >= 2; i--) {
 				Node temp = get(i - 1);
-				Node prevNode = get(i - 2);        // 13		11		10
-				temp.setNext(prevNode);            // 14 -> 13		13 -> 11
+				Node prevNode = get(i - 2);
+				temp.setNext(prevNode);
 				if (i - 2 == 0) {
 					prevNode.setNext(null);
 					Node place;
@@ -193,6 +190,20 @@ public class LinkedList {
 					head = place;
 				}
 			}
+		}
+	}
+
+	public void udemyReverse() {
+		Node temp = head;
+		head = tail;
+		tail = temp;
+		Node after = temp.getNext();
+		Node before = null;
+		for (int i = 0; i < length; i++) {
+			after = temp.getNext();
+			temp.setNext(before);
+			before = temp;
+			temp = after;
 		}
 	}
 }
