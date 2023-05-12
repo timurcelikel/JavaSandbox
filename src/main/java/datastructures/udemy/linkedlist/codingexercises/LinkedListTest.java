@@ -1,4 +1,4 @@
-package datastructures.linkedlist.codingexercises;
+package datastructures.udemy.linkedlist.codingexercises;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

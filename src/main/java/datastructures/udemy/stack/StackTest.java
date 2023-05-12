@@ -1,5 +1,5 @@
-package datastructures.stack;
-import datastructures.linkedlist.codingexercises.Node;
+package datastructures.udemy.stack;
+import datastructures.udemy.linkedlist.codingexercises.Node;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
