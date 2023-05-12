@@ -1,4 +1,4 @@
-package datastructures.linkedlist.codingexercises;
+package datastructures.udemy.linkedlist.codingexercises;
 
 public class Node {
 	private int value;
