@@ -1,4 +1,4 @@
-package designpatterns.openclosed;
+package designpatterns.solid.openclosed;
 
 public class GoodRectangle implements Shape {
 

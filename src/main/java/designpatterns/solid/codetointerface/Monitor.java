@@ -1,4 +1,4 @@
-package designpatterns.codetointerface;
+package designpatterns.solid.codetointerface;
 
 public class Monitor implements DisplayModule {
 
