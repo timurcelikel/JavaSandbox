@@ -13,6 +13,7 @@ public class LazySingleton {
 
 	}
 
+	// The course's Synchronized Method approach literally just adds the synchronized keyword to the method below
 	public static LazySingleton getInstance() {
 
 		if (uniqueInstance == null) {

@@ -16,6 +16,8 @@ public class LazySingletonClient {
 		singleton = null;
 		singleton = LazySingleton.getInstance();
 
+		// singleton.setData(65); // this is allowed but we are still only ever updating the one object in memory
+
 		System.out.println("Second reference: " + singleton);
 		System.out.println("Singleton data value is: " + singleton.getData());
 	}
