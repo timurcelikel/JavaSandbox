@@ -15,15 +15,6 @@ public class Node<T> {
 
 		return data;
 	}
-	public static <T> void breadthFirst(final Node<T> root) {
-		if (root == null) {
-			return;
-		}
-
-
-
-	}
-
 
 	public void setData(final T data) {
 
