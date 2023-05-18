@@ -28,4 +28,12 @@ public class SelectionSortTest {
 		int[] expectedArray = { 1, 1, 1, 2, 2, 2, 3, 3, 3, 3 };
 		assertEquals(Arrays.toString(expectedArray), Arrays.toString(sortedArray));
 	}
+
+	@Test
+	public void testSelectionSort4() {
+		int[] array = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+		int[] sortedArray = SelectionSort.selectionSort(array);
+		int[] expectedArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		assertEquals(Arrays.toString(expectedArray), Arrays.toString(sortedArray));
+	}
 }
