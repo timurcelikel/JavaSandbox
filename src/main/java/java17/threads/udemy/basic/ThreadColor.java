@@ -1,4 +1,4 @@
-package java17.threads.udemy;
+package java17.threads.udemy.basic;
 
 /**
  * Created by timbuchalka on 25/05/2016.

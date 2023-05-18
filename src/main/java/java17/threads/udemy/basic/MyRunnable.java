@@ -1,6 +1,6 @@
-package java17.threads.udemy;
+package java17.threads.udemy.basic;
 
-import static java17.threads.udemy.ThreadColor.ANSI_RED;
+import static java17.threads.udemy.basic.ThreadColor.ANSI_RED;
 /**
  * Created by timbuchalka on 25/05/2016.
  */
