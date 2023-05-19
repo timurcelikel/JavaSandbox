@@ -48,7 +48,7 @@ public class SortTest {
 	@Test
 	public void testSelectionSort1() {
 		int[] array = { 4, 5, 6, 2, 1, 7, 10, 3, 8, 9 };
-		SelectionSort.sort(array);
+		SelectionSort.udemySort(array);
 		int[] expectedArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 		assertEquals(Arrays.toString(expectedArray), Arrays.toString(array));
 	}
@@ -71,7 +71,7 @@ public class SortTest {
 	@Test
 	public void testSelectionSort4() {
 		int[] array = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
-		SelectionSort.sort(array);
+		SelectionSort.udemySort(array);
 		int[] expectedArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 		assertEquals(Arrays.toString(expectedArray), Arrays.toString(array));
 	}
