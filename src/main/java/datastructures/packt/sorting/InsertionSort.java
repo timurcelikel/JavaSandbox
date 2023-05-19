@@ -6,7 +6,7 @@ public class InsertionSort {
 
 	public static void main(String[] args) {
 		int[] array = { 4, 5, 6, 2, 1, 7, 10, 3, 8, 9 };
-		sort(array);
+		packtSort(array);
 		System.out.println("Array: " + Arrays.toString(array));
 	}
 
@@ -34,10 +34,10 @@ public class InsertionSort {
 		for (int i = 0; i < array.length - 1; i++) {
 			for (int k = i + 1; k > 0; k--) {
 				comparisonCounter++;
-				if (array[k] < array[k-1]) {
+				if (array[k] < array[k - 1]) {
 					int temp = array[k];
-					array[k] = array[k-1];
-					array[k-1] = temp;
+					array[k] = array[k - 1];
+					array[k - 1] = temp;
 					swapCounter++;
 				} else {
 					break;
@@ -55,7 +55,7 @@ public class InsertionSort {
 			int temp = array[i];
 			int j = i - 1;
 			while (j > -1 && temp < array[j]) {
-				array[j+1] = array[j];
+				array[j + 1] = array[j];
 				array[j] = temp;
 				swapCounter++;
 				comparisonCounter++;
