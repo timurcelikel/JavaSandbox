@@ -1,7 +1,5 @@
 package datastructures.packt.sorting;
 
-import java.util.Arrays;
-
 public class SelectionSort {
 
 	public static void main(String[] args) {
@@ -23,7 +21,26 @@ public class SelectionSort {
 				}
 			}
 		}
-		// System.out.println("Swap Count: " + swapCount);
+		System.out.println("Swap Count: " + swapCount);
+	}
+
+	public static void udemySort(int[] array) {
+		int swapCount = 0;
+		for (int i = 0; i < array.length; i++) {
+			int minIndex = i;
+			for (int k = i + 1; k < array.length; k++) {
+				if (array[k] < array[minIndex]) {
+					minIndex = k;
+				}
+			}
+			if (i != minIndex) {
+				int temp = array[i];
+				array[i] = array[minIndex];
+				array[minIndex] = temp;
+				swapCount++;
+			}
+		}
+		System.out.println("Swap Count: " + swapCount);
 	}
 
 	private static void printArray(int[] array) {
