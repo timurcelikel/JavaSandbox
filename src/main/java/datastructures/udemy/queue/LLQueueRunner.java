@@ -10,6 +10,7 @@ public class LLQueueRunner {
 		LLQueue queue = new LLQueue(11);
 		queue.enqueue(12);
 		queue.enqueue(13);
+		System.out.println("--- Before dequeue() ---");
 		queue.printQueue();
 		queue.dequeue();
 		System.out.println("--- After dequeue() ---");
