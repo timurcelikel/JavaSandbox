@@ -7,8 +7,10 @@ public class SortingSandbox {
 		//int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 		//BubbleSortSandbox.sort(array);
 		//SelectionSortSandbox.sort(array);
-		InsertionSortSandbox.sort(array);
-		System.out.println("Sorted: " + Arrays.toString(array));
+		//InsertionSortSandbox.sort(array);
+		int[] sortedArray = MergeSort.sort(array);
+		System.out.println("Sorted: " + Arrays.toString(sortedArray));
+		//System.out.println("Sorted: " + Arrays.toString(array));
 	}
 }
 
