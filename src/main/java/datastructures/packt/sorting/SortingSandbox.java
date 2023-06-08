@@ -14,14 +14,16 @@ public class SortingSandbox {
 
 class InsertionSortSandbox {
 	public static void sort(int[] array) {
+		// 1, 4, 5, 8, 10, 2, 7, 3, 6, 9
 		for (int i = 1; i < array.length; i++) {
 			var current = array[i];
 			var k = i - 1;
 			while (k >= 0 && array[k] > current) {
-				array[k + 1] = array[k];
-				k--;
+				array[k + 1] = array[k]; 		// shift the array element to the right to make room for current
+				k--;							// go down the list starting from the i-th location back to the front of the array
 			}
-			array[k + 1] = current;
+			array[k + 1] = current; 			// Place the current value here. we've reached the first spot in the array where array[k] is not
+			// greater than current.
 		}
 	}
 }
@@ -31,17 +33,17 @@ class SelectionSortSandbox {
 		int swapCounter = 0;
 		int comparisonCounter = 0;
 		for (int i = 0; i < array.length; i++) {
-			int minValue = array[i];
+			int minValue = array[i]; 				// initialize minValue and minIndex
 			int minIndex = i;
 			for (int k = i; k < array.length; k++) {
 				if (array[k] < minValue) {
-					minValue = array[k];
+					minValue = array[k]; 			// keep track of the new minValue and minIndex
 					minIndex = k;
 				}
 				comparisonCounter++;
 			}
 			int temp = array[i];
-			array[i] = array[minIndex];
+			array[i] = array[minIndex]; 			// make the swap
 			array[minIndex] = temp;
 			swapCounter++;
 		}
