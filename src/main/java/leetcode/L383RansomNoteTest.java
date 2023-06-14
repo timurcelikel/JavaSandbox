@@ -12,6 +12,7 @@ public class L383RansomNoteTest {
 
     @Before
     public void setUp() {
+
         l383RansomNote = new L383RansomNote();
     }
 
