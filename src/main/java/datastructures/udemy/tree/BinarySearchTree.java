@@ -6,6 +6,9 @@ public class BinarySearchTree {
 	public BinarySearchTree() {
 	}
 
+	public Node getRoot() {
+		return root;
+	}
 	public Node insertRecursively(Node head, Node node) {
 		if (head == null) {
 			System.out.println(node.getData() + " added as root node");
@@ -24,7 +27,6 @@ public class BinarySearchTree {
 		}
 		return head;
 	}
-
 	public boolean insert(Node node) {
 		Node temp = root;
 		if (root == null) {
@@ -57,7 +59,6 @@ public class BinarySearchTree {
 		}
 		return true;
 	}
-
 	public boolean contains(int value) {
 		Node temp = root;
 		while (temp != null) {
@@ -73,18 +74,11 @@ public class BinarySearchTree {
 		System.out.println("Tree does not contain " + value);
 		return false;
 	}
-
-	public void printTree() {
-		Node temp = root;
-		System.out.println("Root is: " + root);
-		while (true) {
-			if (temp.getLeftChild() != null) {
-				System.out.println(temp.getData() + " left child is " + temp.getLeftChild().getData());
-			}
-			if (temp.getRightChild() != null) {
-				System.out.println(temp.getData() + " right child is " + temp.getRightChild().getData());
-			}
-			temp = temp.getLeftChild();
-		}
+	public void printTree(Node node) {
+		if (node == null)
+			return;
+		System.out.println(node.getData());
+		printTree(node.getLeftChild());
+		printTree(node.getRightChild());
 	}
 }
