@@ -8,9 +8,30 @@ public class BubbleSort {
 		//int[] array = { 4, 5, 6, 2, 1, 7, 10, 3, 8, 9 };
 		int[] array = { 1, 4, 5, 8, 10, 2, 7, 3, 6, 9 };
 
-		packtSort(array);
+		sort2(array);
 		System.out.println("Array: " + Arrays.toString(array));
 	}
+
+	public static void sort2(final int[] array) {
+		for (int i = 0; i < array.length - 1; i++) {
+			for (int k = i; k < array.length - 1; k++) {
+				if (array[i] > array[k + 1]) {
+					//swap
+					int temp = array[i];
+					array[i] = array[k + 1];
+					array[k + 1] = temp;
+				}
+			}
+		}
+		System.out.println(Arrays.toString(array));
+	}
+
+
+
+
+
+
+
 
 	public static void sort(final int[] array) {
 		int comparisonCounter = 0;
