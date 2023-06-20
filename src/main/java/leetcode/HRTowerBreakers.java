@@ -4,7 +4,7 @@ import java.util.List;
 public class HRTowerBreakers {
 
 	// Note: This one was a lot simpler than needing to code how the game plays out. It's like Tic Tac Toe in that it's very predictable who will
-	// win based on the tower set up and who goes first. 
+	// win based on the tower set up and who goes first.
 
 	public static void main(String[] args) {
 		int n = 1;
