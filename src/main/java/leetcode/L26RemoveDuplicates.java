@@ -2,13 +2,19 @@ package leetcode;
 
 import java.util.Arrays;
 
-public class LRemoveDuplicates {
+public class L26RemoveDuplicates {
+
+	/*
+		Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place
+		such that each unique element appears only once. The relative order of the elements should
+		be kept the same. Then return the number of unique elements in nums.
+	*/
 
 	public static void main(String[] args) {
 
 		//System.out.println(removeDuplicates(new int[]{1, 1, 2}));
 		//System.out.println(myOriginalRemoveDuplicates(new int[]{1, 2}));
-		System.out.println(removeDuplicates(new int[]{0,0,1,1,1,2,2,3,3,4}));
+		System.out.println(removeDuplicates(new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 }));
 	}
 
 	public static int removeDuplicates(int[] nums) {
@@ -44,7 +50,7 @@ public class LRemoveDuplicates {
 						condition = false;
 						break;
 					}
-					nums[j] = nums[j+1];
+					nums[j] = nums[j + 1];
 					j++;
 				}
 				if (nums[i] == nums[nums.length - 1]) {
@@ -60,5 +66,4 @@ public class LRemoveDuplicates {
 		System.out.println(Arrays.toString(nums));
 		return uniqueCount;
 	}
-
 }
