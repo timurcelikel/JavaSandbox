@@ -18,8 +18,26 @@ public class L26RemoveDuplicates {
 	}
 
 	public static int removeDuplicates(int[] nums) {
-		// {1, 1, 2}
 		// {0,0,1,1,1,2,2,3,3,4}
+		/*
+			index = 0
+			i = 0
+			nums[0] = 0
+			nums[1] = 0
+			nums[2] = 1
+			nums[3] = 1
+			nums[4] = 2
+
+			Note: nums[index] for index 0 will always be nums[0]
+
+			nums[0] != nums[2]
+			index = 1
+			nums[index] = 1
+
+			nums[1] = nums[4]
+			index = 2
+			nums[index] = 2
+		 */
 		if (nums.length == 1) {
 			return 1;
 		}
