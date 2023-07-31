@@ -2,18 +2,42 @@ package leetcode;
 
 import java.util.Arrays;
 
-public class LRemoveDuplicates {
+public class L26RemoveDuplicates {
+
+	/*
+		Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place
+		such that each unique element appears only once. The relative order of the elements should
+		be kept the same. Then return the number of unique elements in nums.
+	*/
 
 	public static void main(String[] args) {
 
 		//System.out.println(removeDuplicates(new int[]{1, 1, 2}));
 		//System.out.println(myOriginalRemoveDuplicates(new int[]{1, 2}));
-		System.out.println(removeDuplicates2(new int[]{0,0,1,1,1,2,2,3,3,4}));
+		System.out.println(removeDuplicates(new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 }));
 	}
 
 	public static int removeDuplicates(int[] nums) {
-		// {1, 1, 2}
 		// {0,0,1,1,1,2,2,3,3,4}
+		/*
+			index = 0
+			i = 0
+			nums[0] = 0
+			nums[1] = 0
+			nums[2] = 1
+			nums[3] = 1
+			nums[4] = 2
+
+			Note: nums[index] for index 0 will always be nums[0]
+
+			nums[0] != nums[2]
+			index = 1
+			nums[index] = 1
+
+			nums[1] = nums[4]
+			index = 2
+			nums[index] = 2
+		 */
 		if (nums.length == 1) {
 			return 1;
 		}
@@ -44,7 +68,7 @@ public class LRemoveDuplicates {
 						condition = false;
 						break;
 					}
-					nums[j] = nums[j+1];
+					nums[j] = nums[j + 1];
 					j++;
 				}
 				if (nums[i] == nums[nums.length - 1]) {
@@ -60,8 +84,7 @@ public class LRemoveDuplicates {
 		System.out.println(Arrays.toString(nums));
 		return uniqueCount;
 	}
-
-	public static int removeDuplicates2(int[] nums) {
+public static int removeDuplicates2(int[] nums) {
 		// {0,0,1,1,1,2,2,3,3,4}
 		int index = 0;
 		for (int i = 0; i < nums.length; i++) {

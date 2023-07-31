@@ -2,11 +2,17 @@ package leetcode;
 
 import java.util.Arrays;
 
-public class LRemoveElement {
+public class L27RemoveElement {
+
+	/*
+	Given an integer array nums and an integer val, remove all occurrences of val in nums in-place.
+	The order of the elements may be changed. Then return the number of elements in nums which are
+	not equal to val.
+	*/
 
 	public static void main(String[] args) {
 
-		System.out.println(betterRemoveElement(new int[]{3, 2, 2, 3}, 3));
+		System.out.println(betterRemoveElement(new int[] { 3, 2, 2, 3 }, 3));
 	}
 
 	public static int betterRemoveElement(int[] nums, int value) {
