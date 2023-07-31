@@ -1,17 +1,16 @@
 package random;
 
-import java.sql.Array;
 import java.util.*;
 
 public class Sandbox2 {
 
 	public static void main(String[] args) {
-		Integer[] array = {6, 1, 5, 4, 3, 2};
+		Integer[] array = { 6, 1, 5, 4, 3, 2 };
 		Arrays.sort(array);
 		System.out.println(Arrays.toString(array));
 		List<Integer> list = Arrays.asList(array);
 		list.stream().forEach(System.out::println);
-		Integer[] newArray = list.stream().toArray(Integer[] :: new);
+		Integer[] newArray = list.stream().toArray(Integer[]::new);
 		System.out.println(Arrays.toString(newArray));
 
 		for (int i = array.length - 1; i >= 0; i--) {

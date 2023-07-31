@@ -16,7 +16,7 @@ public class CenteneInterview {
 		System.out.println(sortedString);
 	}
 	private static String streamSortAndDedupe(final String numbers) {
-
+		// Convert each split string value to an integer value for distinct and sort. Then convert these values back to a formatted string
 		return Arrays.stream(numbers.split(" ")).map(Integer::valueOf).distinct().sorted().map(String::valueOf).collect(Collectors.joining(" "));
 	}
 	private static String sortAndDedupe(final String numbers) {
