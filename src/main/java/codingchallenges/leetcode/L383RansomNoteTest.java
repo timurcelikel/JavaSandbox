@@ -1,4 +1,4 @@
-package leetcode;
+package codingchallenges.leetcode;
 
 import org.junit.Before;
 import org.junit.Test;

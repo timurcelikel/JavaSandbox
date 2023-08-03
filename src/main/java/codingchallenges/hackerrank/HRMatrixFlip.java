@@ -1,4 +1,4 @@
-package leetcode;
+package codingchallenges.hackerrank;
 import java.util.Arrays;
 import java.util.List;
 public class HRMatrixFlip {
