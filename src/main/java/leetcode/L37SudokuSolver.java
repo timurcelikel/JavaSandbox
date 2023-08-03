@@ -83,10 +83,12 @@ public class L37SudokuSolver {
 							if (solveBoard(board)) {
 								return true;
 							} else {
+								// Reset value and move on to next number to try
 								board[row][column] = '.';
 							}
 						}
 					}
+					// We tried all numbers 1-9 for a given spot and still couldn't solve
 					return false;
 				}
 			}
