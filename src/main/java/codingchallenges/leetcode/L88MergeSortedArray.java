@@ -1,4 +1,4 @@
-package leetcode;
+package codingchallenges.leetcode;
 import java.util.Arrays;
 public class L88MergeSortedArray {
 

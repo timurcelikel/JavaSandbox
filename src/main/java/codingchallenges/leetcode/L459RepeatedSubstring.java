@@ -1,4 +1,4 @@
-package leetcode;
+package codingchallenges.leetcode;
 public class L459RepeatedSubstring {
 
 	public static void main(String[] args) {

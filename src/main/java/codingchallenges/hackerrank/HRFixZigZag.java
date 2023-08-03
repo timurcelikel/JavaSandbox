@@ -1,4 +1,4 @@
-package leetcode;
+package codingchallenges.hackerrank;
 import java.util.Arrays;
 public class HRFixZigZag {
 
