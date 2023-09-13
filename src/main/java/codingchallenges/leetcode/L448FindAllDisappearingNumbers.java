@@ -18,6 +18,8 @@ public class L448FindAllDisappearingNumbers {
 		// [10,2,5,10,9,1,1,4,3,7]
 		// [1,1,2,3,4,5,7,9,10,10]
 		// [1,2,3,4,5,7,9,10]
+		// Idea is to iterate over each value in the array and mark the value at whatever that index is with a negative.
+		// Then we iterate over our array again and anything that was not marked negative didn't have a value in the array and is missing.
 
 		for (int i = 0; i < nums.length; i++) {
 			int index = Math.abs(nums[i]) - 1; // minus 1 to get 0-base index value

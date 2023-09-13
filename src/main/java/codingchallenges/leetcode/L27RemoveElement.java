@@ -12,12 +12,13 @@ public class L27RemoveElement {
 
 	public static void main(String[] args) {
 
-		System.out.println(betterRemoveElement(new int[] { 3, 2, 2, 3 }, 3));
+		//System.out.println(betterRemoveElement(new int[] { 3, 2, 2, 3 }, 3));
+		System.out.println(myOriginalRemoveElement(new int[] { 3, 2, 2, 3 }, 3));
 	}
 
 	public static int betterRemoveElement(int[] nums, int value) {
 		// {3, 2, 2, 3}
-		// 3
+		// returns: 2 for input of 3
 		int index = 0;
 		for (int i = 0; i < nums.length; i++) {
 			if (nums[i] != value) {
