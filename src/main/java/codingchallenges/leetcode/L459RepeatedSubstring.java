@@ -1,4 +1,5 @@
 package codingchallenges.leetcode;
+
 public class L459RepeatedSubstring {
 
 	public static void main(String[] args) {
@@ -15,24 +16,27 @@ public class L459RepeatedSubstring {
 
 		// Another solution: can we take ab and fill out the remainder of the string up to the original string's length with ab and then determine
 		// if those strings are equal?
-		StringBuilder substring = new StringBuilder();
-		int subStringLength = 0;
-		for (int i = 0; i < s.length(); i++) {
-			substring.append(s.charAt(i));
-			subStringLength++;
-			if (s.length() != subStringLength && s.length() % subStringLength == 0) {
-				int division = s.length() / subStringLength;
-				StringBuilder stringToCompare = new StringBuilder();
-				for (int k = 0; k < division; k++) {
-					stringToCompare.append(substring);
-				}
-				if (s.contentEquals(stringToCompare)) {
-					return true;
+		if (s != null) {
+			StringBuilder substring = new StringBuilder();
+			int subStringLength = 0;
+			for (int i = 0; i < s.length(); i++) {
+				substring.append(s.charAt(i));
+				subStringLength++;
+				if (s.length() != subStringLength && s.length() % subStringLength == 0) {
+					int division = s.length() / subStringLength;
+					StringBuilder stringToCompare = new StringBuilder();
+					for (int k = 0; k < division; k++) {
+						stringToCompare.append(substring);
+					}
+					if (s.contentEquals(stringToCompare)) {
+						return true;
+					}
 				}
 			}
 		}
 		return false;
 	}
+
 	public static boolean repeatedSubstringPattern(String s) {
 		// Maybe iterate over each substring and split the original string by this substring and then determine if each of the array elements are
 		// equal to each other after the split?
@@ -49,6 +53,7 @@ public class L459RepeatedSubstring {
 	}
 
 	public static boolean repeatedSubstringPattern2(String s) {
+
 		int len = s.length();
 		for (int i = len / 2; i >= 1; i--) {
 			if (len % i == 0) {

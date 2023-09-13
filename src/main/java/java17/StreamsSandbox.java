@@ -85,9 +85,14 @@ public class StreamsSandbox {
 		System.out.println(Arrays.toString(array));
 
 		// SORTED
-		List<Integer> list1 = Arrays.asList(2, 4, 1, 3, 7, 5, 9);
+		List<Integer> list1 = Arrays.asList(2, 4, 1, 3, 7, 5, 9, 2, 5);
 		List<Integer> sortedList = list1.stream().sorted().collect(Collectors.toList());
 		System.out.println(sortedList); 		// Prints: 1, 2, 3, 4, 5, 7, 9
+		long distinctCount = list1.stream().distinct().count();
+		if (list1.stream().distinct().count() < list1.size()) {
+			System.out.println("Duplicates Found");
+		}
+		System.out.println("Distinct Count: " + distinctCount);
 
 		List<Integer> descendingList = list1.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
 		System.out.println(descendingList); 		// Prints: 9, 7, 5, 4, 3, 2, 1
@@ -109,7 +114,7 @@ public class StreamsSandbox {
 		boolean result3 = fruits.stream().noneMatch(value -> value.startsWith("One"));		// returns false
 		System.out.println(result3);
 
-		// FINDANY, FINDFIRST
+		// FIND ANY, FIND FIRST
 		List<String> stringList2 = Arrays.asList("one", "two", "three", "one");
 
 		Optional<String> element = stringList2.stream().findAny();
